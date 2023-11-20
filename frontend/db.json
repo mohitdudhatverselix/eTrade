@@ -1,0 +1,1009 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productTitle": "3D™ wireless headset",
+      "price": 155,
+      "oldPrice": 255,
+      "productRating": 4.5,
+      "totalReviews": 2,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/product-big-01.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/product-big-01.png",
+      "discount": {
+        "discountPercentage": null,
+        "discountText": "20% OFF"
+      },
+      "category": "Headphones",
+      "color_1": "#aae6f8",
+      "color_2": "#5f8af7",
+      "color_3": "#59c3c0",
+      "size_1": "xs",
+      "size_2": "s",
+      "size_3": "m",
+      "size_4": "l",
+      "size_5": "xl",
+      "discountText": "20% OFF",
+      "discountPercentage": null,
+      "slick_1": "/assets/images/product/product-big-01.png",
+      "slick_2": "/assets/images/product/product-big-02.png",
+      "slick_3": "/assets/images/product/product-big-03.png",
+      "slick_4": "/assets/images/product/product-big-02.png",
+      "slick_5": "/assets/images/product/product-big-02.png"
+    },
+    {
+      "id": 2,
+      "productTitle": "3D™ wireless headset Seconde one",
+      "price": 1200,
+      "oldPrice": 255,
+      "productRating": 2,
+      "totalReviews": 2,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/product-big-01.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/product-big-01.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Headphones"
+    },
+    {
+      "id": 3,
+      "productTitle": "Yantiti Leather & Canvas Bags",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/product-big-01.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/product-big-01.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Accessories"
+    },
+    {
+      "id": 4,
+      "productTitle": "Level 20 RGB Cherry",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 4,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-02.png",
+        "/assets/images/product/electric/product-02.png",
+        "/assets/images/product/electric/product-02.png",
+        "/assets/images/product/electric/product-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-02.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "productTitle": "Logitech Streamcam",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-03.png",
+        "/assets/images/product/electric/product-03.png",
+        "/assets/images/product/electric/product-03.png",
+        "/assets/images/product/electric/product-03.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-03.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "PC Gaming"
+    },
+    {
+      "id": 6,
+      "productTitle": "3D™ wireless headset",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-04.png",
+        "/assets/images/product/electric/product-04.png",
+        "/assets/images/product/electric/product-04.png",
+        "/assets/images/product/electric/product-04.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-04.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "PC Gaming"
+    },
+    {
+      "id": 7,
+      "productTitle": "Bass Meets Clarity",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-05.png",
+        "/assets/images/product/electric/product-05.png",
+        "/assets/images/product/electric/product-05.png",
+        "/assets/images/product/electric/product-05.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-05.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Phones"
+    },
+    {
+      "id": 8,
+      "productTitle": "Mice Logitech",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-06.png",
+        "/assets/images/product/electric/product-06.png",
+        "/assets/images/product/electric/product-06.png",
+        "/assets/images/product/electric/product-06.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-06.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Phones",
+      "stockStatus": "In Stock",
+      "totalStock": 100
+    },
+    {
+      "id": 9,
+      "productTitle": "Zone Headphone",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-07.png",
+        "/assets/images/product/electric/product-07.png",
+        "/assets/images/product/electric/product-07.png",
+        "/assets/images/product/electric/product-07.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-07.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 10,
+      "productTitle": "3D™ wireless headset",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 5,
+      "totalReviews": 0,
+      "isProductInStock": false,
+      "isFreeDeliveryAvailable": false,
+      "discountCode": "SALE10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a libero vulputate, dapibus nunc id, venenatis est. Sed eget nunc vel purus accumsan scelerisque. Sed consectetur viverra lacus ac elementum.",
+      "colors": [
+        "#ff5733",
+        "#3377ff",
+        "#33ff33"
+      ],
+      "sizes": [
+        "s",
+        "m",
+        "l"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-08.png",
+        "/assets/images/product/electric/product-08.png",
+        "/assets/images/product/electric/product-08.png",
+        "/assets/images/product/electric/product-08.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-08.png",
+      "discount": {
+        "discountPercentage": 10,
+        "discountText": "10% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 11,
+      "productTitle": "Media Remote",
+      "price": 29.99,
+      "oldPrice": 49.99,
+      "productRating": 4,
+      "totalReviews": 100,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-09.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-09.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 12,
+      "productTitle": "HD Camera",
+      "price": 49.99,
+      "oldPrice": 49.99,
+      "productRating": 4,
+      "totalReviews": 50,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-10.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-10.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 13,
+      "productTitle": "Gaming Controller",
+      "price": 999.99,
+      "oldPrice": 999.99,
+      "productRating": 4,
+      "totalReviews": 120,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-11.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-11.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 14,
+      "productTitle": "Wall Mount",
+      "price": 999.99,
+      "oldPrice": 999.99,
+      "productRating": 4,
+      "totalReviews": 30,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-12.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-12.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Electronics"
+    },
+    {
+      "id": 15,
+      "productTitle": "Lenevo Laptop",
+      "price": 999.99,
+      "oldPrice": 999.99,
+      "productRating": 4,
+      "totalReviews": 700,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-13.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-13.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Laptops"
+    },
+    {
+      "id": 16,
+      "productTitle": "Juice Grinder Machine",
+      "price": 99,
+      "oldPrice": 99,
+      "productRating": 4,
+      "totalReviews": 300,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/product-big-01.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/product-big-01.png",
+      "discount": {
+        "discountPercentage": null,
+        "discountText": "20% OFF"
+      },
+      "category": "Kitchen Appliances",
+      "color_1": "#aae6f8",
+      "color_2": "#5f8af7",
+      "color_3": "#59c3c0",
+      "size_1": "xs",
+      "size_2": "s",
+      "size_3": "m",
+      "size_4": "l",
+      "size_5": "xl",
+      "discountText": "20% OFF",
+      "discountPercentage": null
+    },
+    {
+      "id": 17,
+      "productTitle": "Wireless Headphone",
+      "price": 59.99,
+      "oldPrice": 59.99,
+      "productRating": 2,
+      "totalReviews": 100,
+      "isProductInStock": true,
+      "isFreeDeliveryAvailable": true,
+      "discountCode": "MOTIVE30",
+      "description": "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.",
+      "colors": [
+        "#aae6f8",
+        "#5f8af7",
+        "#59c3c0"
+      ],
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "images": [
+        "/assets/images/product/electric/product-15.png",
+        "/assets/images/product/product-big-02.png",
+        "/assets/images/product/product-big-03.png",
+        "/assets/images/product/product-big-02.png"
+      ],
+      "thumbnail": "/assets/images/product/electric/product-15.png",
+      "discount": {
+        "discountPercentage": 20,
+        "discountText": "20% OFF"
+      },
+      "category": "Electronics"
+    }
+  ],
+  "arrivals": [
+    {
+      "product_id": 6,
+      "timePeriodOfArrivals": "Week"
+    },
+    {
+      "product_id": 7,
+      "timePeriodOfArrivals": "Week"
+    },
+    {
+      "product_id": 8,
+      "timePeriodOfArrivals": "Week"
+    },
+    {
+      "product_id": 9,
+      "timePeriodOfArrivals": "Week"
+    },
+    {
+      "product_id": 10,
+      "timePeriodOfArrivals": "Week"
+    }
+  ],
+  "trending": [
+    {
+      "product_id": 11,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 12,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 13,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 14,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 15,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 16,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 17,
+      "trendingTitle": "Most Sold"
+    },
+    {
+      "product_id": 19,
+      "trendingTitle": "Most Sold"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user123",
+      "email": "user@example.com",
+      "password": "hashedpassword123",
+      "role": "User"
+    },
+    {
+      "username": "asdf",
+      "email": "asdf",
+      "password": "asdf",
+      "id": 2,
+      "role": "User"
+    },
+    {
+      "email": "a",
+      "username": "A",
+      "password": "a",
+      "id": 3,
+      "role": "Admin"
+    },
+    {
+      "username": "@admin",
+      "email": "@admin",
+      "password": "@admin",
+      "id": 17,
+      "role": "User"
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "password": "a",
+      "id": 18
+    }
+  ],
+  "users_data": [
+    {
+      "user_id": 3,
+      "id": 3,
+      "cart": [
+        {
+          "product_id": 8,
+          "quantity": 2
+        },
+        {
+          "product_id": 0,
+          "quantity": 57
+        },
+        {
+          "product_id": 2,
+          "quantity": 2
+        },
+        {
+          "product_id": 1,
+          "quantity": 3
+        }
+      ],
+      "wishlist": [
+        {
+          "product_id": 20
+        },
+        {
+          "product_id": 2
+        }
+      ],
+      "PendingOrders": [],
+      "shippingAddress": {
+        "street": "123 Main St",
+        "city": "Example City",
+        "state": "CA",
+        "zip": "12345"
+      }
+    },
+    {
+      "signUp_date": "23-10-2023",
+      "cart": [],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": {},
+      "id": 4
+    },
+    {
+      "user_id": 8,
+      "signUp_date": "23-10-2023",
+      "cart": [],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": {},
+      "id": 5
+    },
+    {
+      "cart": [],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 6
+    },
+    {
+      "user_id": 12,
+      "cart": [
+        {
+          "product_id": 2,
+          "quantity": 3
+        },
+        {
+          "product_id": 7,
+          "quantity": 1
+        }
+      ],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 7
+    },
+    {
+      "signUpDate": "23/10/2023",
+      "username": ".",
+      "accountDetails": {
+        "firstName": "mohitfdgfs",
+        "lastName": "asdfsad",
+        "countryRegion": "Australia"
+      },
+      "email": ".",
+      "user_id": 14,
+      "cart": [],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 8
+    },
+    {
+      "signUpDate": "24/10/2023",
+      "username": "a",
+      "email": "a",
+      "user_id": 15,
+      "cart": [
+        {
+          "product_id": 0,
+          "quantity": 27
+        },
+        {
+          "product_id": 1,
+          "quantity": 1
+        },
+        {
+          "product_id": 14,
+          "quantity": 4
+        },
+        {
+          "product_id": 18,
+          "quantity": 2
+        }
+      ],
+      "wishlist": [
+        {
+          "product_id": 2
+        },
+        {
+          "product_id": 3
+        },
+        {
+          "product_id": 8
+        },
+        {
+          "product_id": 6
+        },
+        {
+          "product_id": 7
+        },
+        {
+          "product_id": 11
+        },
+        {
+          "product_id": 15
+        },
+        {
+          "product_id": 13
+        },
+        {
+          "product_id": 1
+        }
+      ],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 9
+    },
+    {
+      "signUpDate": "03/11/2023",
+      "username": "new",
+      "email": "new",
+      "user_id": 16,
+      "cart": [
+        {
+          "product_id": 2,
+          "quantity": 2
+        },
+        {
+          "product_id": 3,
+          "quantity": 1
+        }
+      ],
+      "wishlist": [
+        {
+          "product_id": 1
+        }
+      ],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 10
+    },
+    {
+      "signUpDate": "04/11/2023",
+      "username": "@admin",
+      "email": "@admin",
+      "user_id": 17,
+      "cart": [
+        {
+          "product_id": 0,
+          "quantity": 2
+        }
+      ],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 11
+    },
+    {
+      "signUpDate": "05/11/2023",
+      "username": "a",
+      "email": "a",
+      "user_id": 18,
+      "cart": [],
+      "wishlist": [],
+      "PendingOrders": [],
+      "shippingAddress": [],
+      "id": 12
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 59.98,
+      "orderDate": "2023-10-19T14:30:00Z",
+      "status": "Shipped"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "user_id": 2,
+      "text": "Great product!",
+      "rating": 5
+    }
+  ],
+  "categories": [
+    {
+      "title": "Phones",
+      "imgSrc": "/assets/images/product/categories/elec-4.png",
+      "id": 1
+    },
+    {
+      "title": "Computers",
+      "imgSrc": "/assets/images/product/categories/elec-5.png",
+      "id": 2
+    },
+    {
+      "title": "Accessories",
+      "imgSrc": "/assets/images/product/categories/elec-11.png",
+      "id": 3
+    },
+    {
+      "title": "Laptops",
+      "imgSrc": "/assets/images/product/categories/elec-6.png",
+      "id": 4
+    },
+    {
+      "title": "Monitors",
+      "imgSrc": "/assets/images/product/categories/elec-2.png",
+      "id": 5
+    },
+    {
+      "title": "Networking",
+      "imgSrc": "/assets/images/product/categories/elec-7.png",
+      "id": 6
+    },
+    {
+      "title": "PC Gaming",
+      "imgSrc": "/assets/images/product/categories/elec-8.png",
+      "id": 7
+    },
+    {
+      "title": "Smartwatches",
+      "imgSrc": "/assets/images/product/categories/elec-1.png",
+      "id": 8
+    },
+    {
+      "title": "Headphones",
+      "imgSrc": "/assets/images/product/categories/elec-9.png",
+      "id": 9
+    },
+    {
+      "title": "Camera & Photo",
+      "imgSrc": "/assets/images/product/categories/elec-10.png",
+      "id": 10
+    },
+    {
+      "title": "Video Games",
+      "imgSrc": "/assets/images/product/categories/elec-8.png",
+      "id": 11
+    },
+    {
+      "title": "Sports",
+      "imgSrc": "/assets/images/product/categories/elec-1.png",
+      "id": 12
+    }
+  ]
+}
