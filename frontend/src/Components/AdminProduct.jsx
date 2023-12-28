@@ -25,7 +25,8 @@ const AdminProduct = () => {
   const [editId, setEditId] = useState(false);
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/products`);
+      console.log(response);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -150,7 +151,7 @@ const AdminProduct = () => {
           color_3,
           ...newformData
         } = formData;
-        const response = await axios.post("http://localhost:3001/products", {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/products`, {
           ...newformData,
           colors: ["#aae6f8", "#5f8af7", "#59c3c0"],
           sizes: ["xs", "s", "m", "l", "xl"],
@@ -205,7 +206,7 @@ const AdminProduct = () => {
   const handleEditProduct = (productId) => {
     console.log(`Edit product with ID ${productId}`);
     axios
-      .get(`http://localhost:3001/products/${productId}`)
+      .get(`${process.env.REACT_APP_API_URL}/products/${productId}`)
       .then((res) => {
         setFormData({
           ...res.data,
@@ -235,7 +236,7 @@ const AdminProduct = () => {
   const handleDeleteProduct = (productId) => {
     console.log(`Delete product with ID ${productId}`);
     axios
-      .delete(`http://localhost:3001/products/${productId}`)
+      .delete(`${process.env.REACT_APP_API_URL}/products/${productId}`)
       .then(() => {
         const updatedProducts = products.filter(
           (product) => product.id !== productId

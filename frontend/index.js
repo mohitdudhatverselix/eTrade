@@ -1,147 +1,77 @@
-const express = require('express');
-const db = require('./db/db');
-const morgan = require('morgan');
-const products = require('./model/productModel');
-const Arrivals = require('./model/arrivalsModel');
-const Trending = require('./model/trendingModel');
-
+const express = require("express");
+const db = require("./db/db");
+const morgan = require("morgan");
+const Products = require("./model/productModel");
+const Arrivals = require("./model/arrivalsModel");
+const Trending = require("./model/trendingModel");
+const User = require("./model/usersModel");
+const UserData = require("./model/usersdataModel");
+const Order = require("./model/orderModel");
+const Reviews = require("./model/reviewModel");
+const Categories = require("./model/categoriesModel");
+const cors = require("cors");
 const app = express();
 const port = 7000;
 
+app.use(morgan("tiny"));
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(morgan('tiny'));
-app.use(express.urlencoded({extended: true}))
+const handleCRUD = async (req, res, model) => {
+  const method = req.method;
+  console.log(method);
+  const id = +req.params.id;
+  const body = req.body;
+    switch (method) {
+        case "GET":
+          console.log("get", req.params.id);
+          const data = id ? await Products.find({ id: id }) : await model.find();
+          res.json(data);
+          break;
+        case "POST":
+          const newProduct = new model(body);
+          newProduct
+            .save()
+            .then(() => console.log("New product added successfully"))
+            .catch((err) => {
+              if (err) throw err;
+            });
+          res.json("added" + newProduct);
+          break;
+        case "PUT":
+            await model.findOneAndUpdate({ id: id }, body);
+            res.json("updated");
+          break;
+        case "PATCH":
+            await model.findOneAndUpdate({ id: id }, body);
+            res.json("updated");
+          break;
+        case "DELETE":
+            console.log("delete");
+            await model.deleteOne({ id: id });
+            console.log("deleted");
 
-//products route
-app.get('/products', async(req, res)=>{
-    const data = await products.find();
-    res.json(data);
-});
+            res.json("deleted");
+            break;
+        default:
+          break;
+    }
 
-app.get('/products/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await products.find({id : +id});
-    res.json(data);
-});
+  
+};
 
-app.post('/products', async(req, res)=>{
-    const newProductData = req.body;
-    const newProduct = new products(newProductData);
-    newProduct.save()
-    .then(()=>console.log("New product added successfully"))
-    .catch((err)=>{
-        if(err)throw err;
-    });
-    res.json("added" + newProduct);
-});
+//routes
+app.route("/products/:id?").all(async (res, req) => handleCRUD(res, req, Products));
+app.route("/arrivals/:id?").all(async (res, req) => handleCRUD(res, req, Arrivals));
+app.route("/trending/:id?").all(async (res, req) => handleCRUD(res, req, Trending));
+app.route("/users/:id?").all(async (res, req) => handleCRUD(res, req, User));
+app.route("/users_data/:id?").all(async (res, req) => handleCRUD(res, req, UserData));
+app.route("/orders/:id?").all(async (res, req) => handleCRUD(res, req, Order));
+app.route("/reviews/:id?").all(async (res, req) => handleCRUD(res, req, Reviews));
+app.route("/categories/:id?").all(async (res, req) => handleCRUD(res, req, Categories));
 
-app.put('/products/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await products.findOneAndUpdate({id: +id}, body);
-    res.json("updated");
-});
-
-app.patch('/products/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await products.findOneAndUpdate({id: +id}, body);
-    res.json("updated");
-});
-
-app.delete('/products/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await products.deleteOne({id : +id});
-    console.log(data);
-    res.json("deleted");
-});
-
-
-//arrivals routes
-app.get('/arrivals', async(req, res)=>{
-    const data = await Arrivals.find();
-    res.json(data);
-});
-app.get('/arrivals/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await Arrivals.find({product_id : +id});
-    res.json(data);
-});
-app.post('/arrivals', async(req, res)=>{
-    const newProductData = req.body;
-    console.log(req.body);
-    const newProduct = new Arrivals(newProductData);
-    newProduct.save()
-    .then(()=>console.log("New product added successfully"))
-    .catch((err)=>{
-        if(err)throw err;
-    });
-    res.json("added" + newProduct);
-});
-app.put('/arrivals/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await Arrivals.findOneAndUpdate({product_id: +id}, body);
-    res.json("updated");
-});
-app.patch('/arrivals/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await Arrivals.findOneAndUpdate({product_id: +id}, body);
-    res.json("updated");
-});
-app.delete('/arrivals/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await Arrivals.deleteOne({product_id : +id});
-    console.log(data);
-    res.json("deleted");
-});
-
-
-//trending routes
-app.get('/trending', async(req, res)=>{
-    const data = await Trending.find();
-    res.json(data);
-});
-app.get('/trending/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await Trending.find({product_id : +id});
-    res.json(data);
-});
-app.post('/trending', async(req, res)=>{
-    const newProductData = req.body;
-    console.log(req.body);
-    const newProduct = new Trending(newProductData);
-    newProduct.save()
-    .then(()=>console.log("New product added successfully"))
-    .catch((err)=>{
-        if(err)throw err;
-    });
-    res.json("added" + newProduct);
-});
-app.put('/trending/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await Trending.findOneAndUpdate({product_id: +id}, body);
-    res.json("updated");
-});
-app.patch('/trending/:id', async(req, res)=>{
-    const id = req.params.id;
-    const body = req.body;
-    const newProduct = await Trending.findOneAndUpdate({product_id: +id}, body);
-    res.json("updated");
-});
-app.delete('/trending/:id', async(req, res)=>{
-    const id = req.params.id;
-    const data = await Trending.deleteOne({product_id : +id});
-    console.log(data);
-    res.json("deleted");
-});
-
-
-
-app.listen(port ,() => {
-    console.log('====================================');
-    console.log("port is listening on " + port);
-    console.log('====================================');
+app.listen(port, () => {
+  console.log("====================================");
+  console.log("port is listening on " + port);
+  console.log("====================================");
 });

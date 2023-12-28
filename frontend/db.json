@@ -698,7 +698,7 @@
     },
     {
       "email": "a",
-      "username": "A",
+      "username": "a",
       "password": "a",
       "id": 3,
       "role": "Admin"
@@ -714,7 +714,8 @@
       "username": "a",
       "email": "a",
       "password": "a",
-      "id": 18
+      "id": 18,
+      "role": "Admin"
     }
   ],
   "users_data": [
