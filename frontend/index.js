@@ -15,20 +15,22 @@ const port = 7000;
 
 app.use(morgan("tiny"));
 app.use(cors());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));//for forms submission
 
 const handleCRUD = async (req, res, model) => {
   const method = req.method;
   console.log(method);
-  const id = +req.params.id;
+  const id = req.params.id;
   const body = req.body;
     switch (method) {
         case "GET":
           console.log("get", req.params.id);
-          const data = id ? await Products.find({ id: id }) : await model.find();
+          const data = id ? await Products.find({ _id: id }) : await model.find();
           res.json(data);
           break;
         case "POST":
+            console.log(body);
           const newProduct = new model(body);
           newProduct
             .save()
@@ -39,16 +41,16 @@ const handleCRUD = async (req, res, model) => {
           res.json("added" + newProduct);
           break;
         case "PUT":
-            await model.findOneAndUpdate({ id: id }, body);
+            await model.findOneAndUpdate({ _id: id }, body);
             res.json("updated");
           break;
         case "PATCH":
-            await model.findOneAndUpdate({ id: id }, body);
+            await model.findOneAndUpdate({ _id: id }, body);
             res.json("updated");
           break;
         case "DELETE":
             console.log("delete");
-            await model.deleteOne({ id: id });
+            await model.deleteOne({ _id: id });
             console.log("deleted");
 
             res.json("deleted");

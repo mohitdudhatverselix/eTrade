@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const AdminProduct = () => {
   const navigate = useNavigate();
-  const [products, setProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [formData, setFormData] = useState({
+  const initialFormData ={
     productTitle: "",
     price: "",
     oldPrice: "",
@@ -18,30 +16,31 @@ const AdminProduct = () => {
     isProductInStock: false,
     isFreeDeliveryAvailable: false,
     thumbnail: "",
-    color_1: "",
-    color_2: "",
-    color_3: "",
-  });
+    colors:[],
+    sizes:[],
+    images:[],
+    // colors:["", "", ""],
+    // sizes:["", "", "", "", ""],
+    // images:["", "", "", ""],
+  }
+  const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [formData, setFormData] = useState(initialFormData);
   const [editId, setEditId] = useState(false);
+  const url = `${process.env.REACT_APP_API_URL}/products`;
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/products`);
-      console.log(response);
+      const response = await axios.get(url);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
-  useEffect(() => {
-    fetchData();
-    const userData = JSON.parse(localStorage.getItem("user_data"));
-    if (userData.username.includes("@admin")) {
-      alert("You are admiin");
-    } else {
-      alert("You can't access this page");
-      navigate("/");
-    }
-  }, []);
+  const FormChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleViewDetails = async (productId) => {
     try {
@@ -56,13 +55,7 @@ const AdminProduct = () => {
       );
     }
   };
-  const FormChange = (e) => {
-    const name = e.target.name;
-    console.log(name);
-    const value = e.target.value;
-    setFormData({ ...formData, [name]: value });
-    console.log({ ...formData, [name]: value });
-  };
+
 
   const handleAddProduct = async () => {
     if (editId) {
@@ -83,17 +76,12 @@ const AdminProduct = () => {
           ...newformData
         } = formData;
         const response = await axios.put(
-          `http://localhost:3001/products/${editId}`,
+          `${url}/${editId}`,
           {
             ...newformData,
-            colors: ["#aae6f8", "#5f8af7", "#59c3c0"],
-            sizes: ["xs", "s", "m", "l", "xl"],
-            images: [
-              formData.slick_1,
-              formData.slick_2,
-              formData.slick_3,
-              formData.slick_4,
-            ],
+            images: [...formData.images],
+            colors:[...formData.colors],
+            sizes:[...formData.sizes],
             thumbnail: formData.thumbnail,
             discount: {
               discountPercentage: parseFloat(formData.discountAmount),
@@ -118,86 +106,28 @@ const AdminProduct = () => {
           isProductInStock: false,
           isFreeDeliveryAvailable: false,
           thumbnail: "",
-          color_1: "",
-          color_2: "",
-          color_3: "",
-          size_1: "",
-          size_2: "",
-          size_3: "",
-          size_4: "",
-          size_5: "",
-          slick_1: "",
-          slick_2: "",
-          slick_3: "",
-          slick_4: "",
+          images: [...formData.images],
+          colors:[...formData.colors],
+          sizes:[...formData.sizes],
         });
       } catch (error) {
         console.error("Error adding product:", error);
       }
     } else {
       try {
-        const {
-          slick_1,
-          slick_2,
-          slick_3,
-          slick_4,
-          size_1,
-          size_2,
-          size_3,
-          size_4,
-          size_5,
-          color_1,
-          color_2,
-          color_3,
-          ...newformData
-        } = formData;
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/products`, {
-          ...newformData,
-          colors: ["#aae6f8", "#5f8af7", "#59c3c0"],
-          sizes: ["xs", "s", "m", "l", "xl"],
-          images: [
-            formData.slick_1,
-            formData.slick_2,
-            formData.slick_3,
-            formData.slick_4,
-          ],
-          thumbnail: formData.thumbnail,
+          ...formData,
           discount: {
             discountPercentage: parseFloat(formData.discountPercentage),
             discountText: formData.discountText,
           },
-          category: formData.category,
         });
 
         const newProducts = [...products, response.data];
         setProducts(newProducts);
-        setFormData({
-          productTitle: "",
-          price: "",
-          oldPrice: "",
-          discountCode: "",
-          description: "",
-          category: "3", // Default category value
-          discountPercentage: "",
-          discountText: "",
-          isProductInStock: false,
-          isFreeDeliveryAvailable: false,
-          thumbnail: "",
-          color_1: "",
-          color_2: "",
-          color_3: "",
-          size_1: "",
-          size_2: "",
-          size_3: "",
-          size_4: "",
-          size_5: "",
-          slick_1: "",
-          slick_2: "",
-          slick_3: "",
-          slick_4: "",
-        });
+        setFormData(initialFormData);
         console.log(newProducts);
-        console.log(`Added product with ID ${response.data.id}`);
+        console.log(`Added product with ID ${response.data._id}`);
       } catch (error) {
         console.error("Error adding product:", error);
       }
@@ -206,24 +136,15 @@ const AdminProduct = () => {
   const handleEditProduct = (productId) => {
     console.log(`Edit product with ID ${productId}`);
     axios
-      .get(`${process.env.REACT_APP_API_URL}/products/${productId}`)
+      .get(`${url}/${productId}`)
       .then((res) => {
         setFormData({
           ...res.data,
-          color_1: res.data.colors[0],
-          color_2: res.data.colors[1],
-          color_3: res.data.colors[2],
-          size_1: res.data.sizes[0],
-          size_2: res.data.sizes[1],
-          size_3: res.data.sizes[2],
-          size_4: res.data.sizes[3],
-          size_5: res.data.sizes[4],
+          colors:[res.data.colors],
+          sizes:[res.data.sizes],
+          images:[res.data.images],
           discountText: res.data.discount.discountText,
           discountPercentage: res.data.discount.discountPercentage,
-          slick_1: res.data.images[0],
-          slick_2: res.data.images[1],
-          slick_3: res.data.images[2],
-          slick_4: res.data.images[3],
         });
         console.log(formData);
         setEditId(productId);
@@ -234,20 +155,27 @@ const AdminProduct = () => {
   };
 
   const handleDeleteProduct = (productId) => {
-    console.log(`Delete product with ID ${productId}`);
     axios
       .delete(`${process.env.REACT_APP_API_URL}/products/${productId}`)
       .then(() => {
-        const updatedProducts = products.filter(
-          (product) => product.id !== productId
-        );
-        setProducts(updatedProducts);
+        fetchData();
         console.log(`Product with ID ${productId} deleted.`);
       })
       .catch((error) => {
         console.error(`Error deleting product with ID ${productId}:`, error);
       });
   };
+
+  useEffect(() => {
+    fetchData();
+    const userData = JSON.parse(localStorage.getItem("user_data"));
+    if (userData.username.includes("@admin")) {
+      alert("You are admiin");
+    } else {
+      alert("You can't access this page");
+      navigate("/");
+    }
+  }, []);
 
   return (
     <div className="container overflow-hidden">
@@ -282,7 +210,7 @@ const AdminProduct = () => {
                 </button>
               </td>
               <td>
-                <button onClick={() => handleDeleteProduct(product.id)}>
+                <button onClick={() => handleDeleteProduct(product._id)}>
                   Delete
                 </button>
               </td>
@@ -380,10 +308,13 @@ const AdminProduct = () => {
                 </label>
                 <input
                   type="text"
-                  name={`color_${i + 1}`}
+                  name={`color-${i + 1}`}
                   placeholder={`#Your Color Product ${i + 1}`}
-                  value={formData[`color_${i + 1}`]} // Use dynamic key
-                  onChange={(e) => FormChange(e)} // Pass the key and value to FormChange
+                  value={formData?.colors[i] || ""}
+                  onChange={(e) => {
+                    const updatedColor =  [...formData.colors];
+                    updatedColor[i] = e.target.value;
+                    setFormData({ ...formData, colors: updatedColor })}}
                 />
               </div>
             </div>
@@ -401,8 +332,12 @@ const AdminProduct = () => {
                   type="text"
                   name={`size_${i + 1}`}
                   placeholder={`Product Size ${i + 1}`}
-                  onChange={FormChange}
-                  value={formData[`size_${i + 1}`]} // Use dynamic key
+                  onChange={(e)=>{
+                    const updatedSize =  [...formData.sizes];
+                    updatedSize[i] = e.target.value;
+                    setFormData({ ...formData, sizes: updatedSize })
+                  }}
+                  value={formData?.sizes[i] || ""}
                 />
               </div>
             </div>
@@ -411,7 +346,7 @@ const AdminProduct = () => {
 
         <div>
           <h4>Slick Images</h4>
-          {[1, 2, 3, 4].map((item) => {
+          {[1, 2, 3, 4].map((item, i) => {
             return (
               <div className="form-group">
                 <label>
@@ -423,9 +358,11 @@ const AdminProduct = () => {
                   id={`slick_${item}`}
                   name={`slick_${item}`}
                   placeholder={`Slick Url ${item} `}
-                  value={formData[`slick_${item}`]}
+                  value={formData?.images[i] || ""}
                   onChange={(e) => {
-                    FormChange(e);
+                    const updatedImages =  [...formData.images];
+                    updatedImages[i] = e.target.value;
+                    setFormData({ ...formData, images: updatedImages})
                   }}
                 />
               </div>
