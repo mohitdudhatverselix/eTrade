@@ -11,10 +11,10 @@ const NavbarMenu: NextPage<Props> = ({}) => {
       <div className="header-navbar">
         <div className="header-brand">
           <Link href="/index.html" className="logo logo-dark">
-            <img src="/assets/images/logo/logo.png" alt="Site Logo" />
+            <img src="/images/logo/logo.png" alt="Site Logo" />
           </Link>
           <Link href="/index.html" className="logo logo-light">
-            <img src="/assets/images/logo/logo-light.png" alt="Site Logo" />
+            <img src="/images/logo/logo-light.png" alt="Site Logo" />
           </Link>
         </div>
         <div className="header-main-nav">
@@ -24,7 +24,7 @@ const NavbarMenu: NextPage<Props> = ({}) => {
             </button>
             <div className="mobile-nav-brand">
               <Link href="/index.html" className="logo">
-                <img src="assets/images/logo/logo.png" alt="Site Logo" />
+                <img src="/images/logo/logo.png" alt="Site Logo" />
               </Link>
             </div>
             <ul className="mainmenu">

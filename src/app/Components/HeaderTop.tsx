@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-
 interface Props {}
 
 const HeaderTop: NextPage<Props> = ({}) => {

@@ -1207,6 +1207,7 @@ Array.from(imageInput).forEach((element) => {
     }
   });
 });
+console.log("hello js loaded");
 
 Array.from(dropzone).forEach((element) => {
   element.addEventListener("click", () => {
